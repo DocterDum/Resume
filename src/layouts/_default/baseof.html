@@ -1,0 +1,6 @@
+<!--layouts/_default/baseof.html-->
+{{ partial "head.html" . }}  
+	{{ block "main" . }}
+		{{ .Content | markdownify }}  
+	{{ end }}
+{{ partial "footer.html" }}

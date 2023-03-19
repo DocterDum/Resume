@@ -1,0 +1,278 @@
+
+baseurl		 = "https://mcgeary.com.au/resume/"
+theme		   = "devres"
+languageCode	= "en-US"
+	
+title = "Alec McGeary Resume"
+	
+[deployment]
+	order = [".jpg$", ".gif$"]
+	
+	[[deployment.targets]]
+	# An arbitrary name for this target.
+	name = "AWS-S3"
+	URL = "s3://hugodeploy?region=ap-southeast-2&prefix=resume/"
+		
+	[[deployment.matchers]]
+		# Cache static assets for 1 year.
+		pattern = "^.+\\.(js|css|svg|ttf)$"
+		cacheControl = "max-age=31536000, no-transform, public"
+		gzip = true
+	
+	[[deployment.matchers]]
+		# Cache images for 1 year
+		pattern = "^.+\\.(png|jpg)$"
+		cacheControl = "max-age=31536000, no-transform, public"
+		gzip = false
+	
+	[[deployment.matchers]]
+		# Set custom content type for /sitemap.xml
+		pattern = "^sitemap\\.xml$"
+		contentType = "application/xml"
+		gzip = true
+		
+	[[deployment.matchers]]
+		pattern = "^.+\\.(html|xml|json)$"
+		gzip = true
+
+[params]
+	author = "Alec McGeary"
+	description = "My Resume"
+	
+	primaryColor = "#54B689"
+	textPrimaryColor = "#292929"
+	
+	docsCSS = ["css/docs.css"]
+	docsAppend = ["assets/images/Projects.webp", "assets/images/Skills.webp"]
+	
+	[params.profile]
+		enable = true
+		name = "Alec McGeary"
+		tagline = "IT Systems Specialist"
+		avatar = "salm.webp"
+	
+	[params.contact]
+		enable = true
+		location = "Tasmania, Australia"
+		
+		#[[params.contact.list]]
+		#	icon = "fas fa-phone-square"
+		#	url = "tel:0408 854 092"
+		#	text = "0408 854 092"
+		[[params.contact.list]]
+			icon = "fas fa-envelope-square"
+			url = "mailto:almc7000@gmail.com"
+			text = "almc7000@gmail.com"
+		[[params.contact.list]]
+			icon = "fas fa-globe"
+			url = "https://mcgeary.com.au/resume"
+			text = "mcgeary.com.au/resume"
+	
+	[params.skills]
+		enable = false
+	
+		[[params.skills.list]]
+			title = "Technical"
+			[[params.skills.list.items]]
+				details = "JavaScript/Angular/React/Vue"
+			[[params.skills.list.items]]
+				details = "Python/Ruby/PHP"
+			[[params.skills.list.items]]
+				details = "Node.js/ASP.NET"
+			[[params.skills.list.items]]
+				details = "PostgreSQL/MySQL"
+			[[params.skills.list.items]]
+				details = "Object-oriented design"
+			[[params.skills.list.items]]
+				details = "Design and implement database structures"
+			[[params.skills.list.items]]
+				details = "Lead and deliver complex software systems"
+	
+		[[params.skills.list]]
+			title = "Professional"
+			[[params.skills.list.items]]
+				details = "Effective communication"
+			[[params.skills.list.items]]
+				details = "Team player"
+			[[params.skills.list.items]]
+				details = "Strong problem solver"
+			[[params.skills.list.items]]
+				details = "Good time management"
+	
+	[params.education]
+		enable = false
+	
+		[[params.education.list]]
+			degree = "MSc in Computer Science"
+			university = "University College London"
+			dates = "2010 - 2011"
+		[[params.education.list]]
+			degree = "BSc Maths and Physics"
+			university = "Imperial College London"
+			dates = "2007 - 2010"
+	
+	[params.awards]
+		enable = true
+	
+		[[params.awards.list]]
+			name = "Continuum RMM"
+			body = "Continuum"
+			date = "April 2019"
+		[[params.awards.list]]
+			name = "Certificate IV in Information Technology"
+			body = "TasTAFE"
+			date = "March 2019"
+		[[params.awards.list]]
+			name = "ConnectWise RMM Automate Implementation"
+			body = "ConnectWise"
+			date = "July 2018"
+		[[params.awards.list]]
+			name = "ConnectWise Manage/Service Desk"
+			body = "ConnectWise"
+			date = "June 2018"
+		[[params.awards.list]]
+			name = "Sophos Certified Engineer"
+			body = "Sophos"
+			date = "March 2018"
+		[[params.awards.list]]
+			name = "Year 12, Tasmanian Certificate of Education"
+			body = "Rosny College"
+			date = "November 2017"
+	
+	[params.languages]
+		enable = false
+	
+		[[params.languages.list]]
+			name = "English"
+			level = "Native"
+		[[params.languages.list]]
+			name = "Spanish"
+			level = "Professional"
+	
+	[params.interests]
+		enable = true
+	
+		[[params.interests.list]]
+			name = "John Austin"
+			body = "IT Service Engineer, Compago"
+			phone = "0419 297 110"
+			email = "john.austin@compagotech.com.au"
+		[[params.interests.list]]
+			name = "Jacob Merchant"
+			body = "Project Manager – PowerNet IT"
+			phone = "0439 171 190"
+			email = "jmerchant@power-net.com.au"
+
+	
+	[params.summary]
+		enable = true
+		[[params.summary.list]]
+			text2 = "I’m an IT enthusiast with a passion for technology, computers especially. I love learning and am always eager to expand my knowledge, which in early 2021 drove me to begin a Bachelor of Engineering (With Honours) course. I spend most of my spare time working on IT related projects, some of which I have listed below. I love challenging work that gives me a chance to exercise my problem solving skills."
+		[[params.summary.list]]
+			text = "I’m an IT enthusiast with a passion for technology, computers especially. This passion, along with my love of learning and eagerness to expand my knowledge, drives me to spend a large amount of my spare time working on IT related projects, a small number of which I have listed below. I love challenging work that gives me a chance to exercise my problem solving skills."
+		[[params.summary.list]]
+			text3 = "As my projects and skills matries below show, I have experience with a wide variety of technologies. I find one of my greatest strengths is my abili"
+	
+	[params.experience]
+		enable = true
+	
+		[[params.experience.list]]
+			title = "Managed Service Consultant"
+			dates = "Apr 2019 – May 2020"
+			company = "Power-Net IT Solutions"
+			details = "I was employed as a Managed Service Consultant at Power-Net IT Solutions.  My position at Power-Net was unique as I was permanently on-site for a large client of ours. In this unique position I was required to work independently, managing my own time as I worked through tickets and managing relations with the client. In addition to this I also helped document and automate as many relevant processes as possible."
+	
+		[[params.experience.list]]
+			title = "IT Service Engineer"
+			dates = "Dec 2017 – Apr 2019"
+			company = "Axsys IT"
+			details = "My role at Axsys IT was a level 1/2 IT Service Engineer. I worked on a variety of tasks from implementation of new systems to maintenance and upgrading on older systems. In this position I had a few notable longer-term projects:"
+			details2 = "I have also had the opportunity to assist with certain accounting and sales roles, which has helped me gain a much greater understanding of the processes surrounding a business such as procurement, billing systems, invoicing and SLAs."
+	
+			[[params.experience.list.items]]
+				details = "Working to increase security across all our offerings, especially cloud services"
+			[[params.experience.list.items]]
+				details = "Rebuilding cloud infrastructure to better reflect suggested best practices"
+			[[params.experience.list.items]]
+				details = "Assisting with the implementation of IT Business Management software (ConnectWise)"
+			[[params.experience.list.items]]
+				details = "External IT cover for clients"
+		
+		[[params.experience.list]]
+			title = "Counter Service"
+			dates = "2016 – 2017"
+			company = "Howrah Point Store"
+		
+		[[params.experience.list]]
+			title = "Crew Member"
+			dates = "2015 – 2016"
+			company = "McDonalds"
+		
+	
+	[params.projects]
+		enable = true
+	
+		[[params.projects.list]]
+			title = "Project Lorem Ipsum"
+			meta = "Open Source"
+			tagline = "You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+	
+		[[params.projects.list]]
+			title = "Project Sed Fringilla"
+			meta = "Open Source"
+			tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+	
+		[[params.projects.list]]
+			title = "Project Praesent"
+			meta = "Open Source"
+			tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
+	
+	[params.information]
+		enable = true
+	
+		[[params.information.list]]
+			title = "Papers"
+		[[params.information.list.items]]
+			details = "2018 · Lorem Ipsum"
+		[[params.information.list.items]]
+			details = "2016 · Sed Fringilla"
+	
+		[[params.information.list]]
+			title = "Interests"
+			details = "Climbing, Snowboarding, Photography, Travelling"
+	
+	[params.social]
+		enable = true
+	
+		[[params.social.list]]
+			icon = "fab fa-github-square"
+			url = "//github.com/DocterDum"
+			title = "DocterDum"
+		[[params.social.list]]
+			icon = "fab fa-linkedin"
+			url = "//linkedin.com/in/alec-mcgeary"
+			title = "Alec McGeary"
+
+[taxonomies]
+	tag = "tags"
+
+[permalinks]
+	blog = "/:filename/"
+
+
+[menu]
+	[[menu.main]]
+		name = "Home"
+		pre = "home"
+		url = "/"
+		weight = 1
+	[[menu.main]]
+		name = "Blog"
+		pre = "edit"
+		url = "/blog/"
+		weight = 2
+	[[menu.main]]
+		name = "Tags"
+		pre = "tag"
+		url = "/tags/"
+		weight = 3

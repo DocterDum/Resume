@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alec McGeary Resume</title>
+    <link>https://mcgeary.com.au/resume/</link>
+    <description>Recent content on Alec McGeary Resume</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 29 Oct 2021 06:22:31 +0000</lastBuildDate><atom:link href="https://mcgeary.com.au/resume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://mcgeary.com.au/resume/post/my-first-post/</link>
+      <pubDate>Fri, 29 Oct 2021 06:22:31 +0000</pubDate>
+      
+      <guid>https://mcgeary.com.au/resume/post/my-first-post/</guid>
+      <description>   Syntax Description     Header Title   Paragraph Text    Test Content Other Test Content { &amp;quot;firstName&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;lastName&amp;quot;: &amp;quot;Smith&amp;quot;, &amp;quot;age&amp;quot;: 25 } </description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://mcgeary.com.au/resume/projects/</link>
+      <pubDate>Fri, 29 Oct 2021 06:22:31 +0000</pubDate>
+      
+      <guid>https://mcgeary.com.au/resume/projects/</guid>
+      <description>Project Description Technologies Used     Stellaris (Game) Data Extraction Stellaris lacks an API, so I&#39;ve built 2 methods (DLL injection or Python script) to read the game&#39;s memory and relay the data to external programs. Python - ctypes C++ - MSBuild/MSVC, DLL Injection   Stellaris Data Dashboard Originally built as a simple display for the data from the previous project, this now also tracks the time to provide reminders when ingame tasks are nearly due.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://mcgeary.com.au/resume/rnd/</link>
+      <pubDate>Fri, 29 Oct 2021 06:22:31 +0000</pubDate>
+      
+      <guid>https://mcgeary.com.au/resume/rnd/</guid>
+      <description>Project‌ &amp;nbsp; ‌          Description‌ &amp;nbsp; ‌          Technologies‌ ‌Used‌ &amp;nbsp; ‌            Stellaris‌ ‌(Game)‌ ‌Data‌ ‌Extraction‌ &amp;nbsp; ‌          Stellaris‌ ‌lacks‌ ‌an‌ ‌API,‌ ‌so‌ ‌I’ve‌ &amp;nbsp; ‌       built‌ ‌2‌ ‌methods‌ ‌(DLL‌ ‌injection‌ &amp;nbsp; ‌       or‌ ‌Python‌ ‌script)‌ ‌to‌ ‌read‌ ‌the‌ &amp;nbsp; ‌       game’s‌ ‌memory‌ ‌and‌ ‌relay‌ ‌the‌ &amp;nbsp; ‌       data‌ ‌to‌ ‌external‌ ‌programs.</description>
+    </item>
+    
+  </channel>
+</rss>
