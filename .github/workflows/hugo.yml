@@ -79,5 +79,5 @@ jobs:
             AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_DEFAULT_REGION: $${{ secrets.AWS_DEFAULT_REGION }}
           run: |
-            echo ${AWS_ACCESS_KEY_ID} ${AWS_SECRET_ACCESS_KEY} \
-            hugo deploy -v
+            echo $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY \
+            && hugo deploy -v
