@@ -74,10 +74,14 @@ jobs:
             && sudo dpkg -i ${{ runner.temp }}/hugo.deb
         - name: Checkout
           uses: actions/checkout@v3
+        - name: Build with Hugo
+          run: |
+            hugo build
         - name: Deploy with Hugo
           env: # Env vars to allow AWS Access
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           run: |
+            hugo build
             hugo deploy -v
