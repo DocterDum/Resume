@@ -55,10 +55,10 @@ title = "Alec McGeary Resume"
 		enable = true
 		location = "Tasmania, Australia"
 		
-		#[[params.contact.list]]
-		#	icon = "fas fa-phone-square"
-		#	url = "tel:0408 854 092"
-		#	text = "0408 854 092"
+		[[params.contact.list]]
+			icon = "fas fa-phone-square"
+			url = "tel:0408 854 092"
+			text = "0408 854 092"
 		[[params.contact.list]]
 			icon = "fas fa-envelope-square"
 			url = "mailto:almc7000@gmail.com"
